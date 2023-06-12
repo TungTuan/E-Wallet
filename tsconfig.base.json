@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@e-wallet/additional-info": ["libs/additional-info/src/index.ts"],
+      "@e-wallet/basic-info": ["libs/basic-info/src/index.ts"],
+      "@e-wallet/constant": ["libs/constant/src/index.ts"],
+      "@e-wallet/e-wallet-container": ["libs/e-wallet-container/src/index.ts"],
+      "@e-wallet/purpose": ["libs/purpose/src/index.ts"],
+      "@e-wallet/store": ["libs/store/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
