@@ -17,10 +17,15 @@
     "paths": {
       "@e-wallet/additional-info": ["libs/additional-info/src/index.ts"],
       "@e-wallet/basic-info": ["libs/basic-info/src/index.ts"],
+      "@e-wallet/choose-template": ["libs/choose-template/src/index.ts"],
       "@e-wallet/constant": ["libs/constant/src/index.ts"],
-      "@e-wallet/e-wallet-container": ["libs/e-wallet-container/src/index.ts"],
+      "@e-wallet/onboarding": ["libs/onboarding/src/index.ts"],
       "@e-wallet/purpose": ["libs/purpose/src/index.ts"],
-      "@e-wallet/store": ["libs/store/src/index.ts"]
+      "@e-wallet/review-page": ["libs/review-page/src/index.ts"],
+      "@e-wallet/shared/constant": ["libs/shared/constant/src/index.ts"],
+      "@e-wallet/shared/interface": ["libs/shared/interface/src/index.ts"],
+      "@e-wallet/store": ["libs/store/src/index.ts"],
+      "@e-wallet/success-page": ["libs/success-page/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

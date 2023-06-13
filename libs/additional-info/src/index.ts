@@ -1,1 +1,1 @@
-export * from './lib/additional-info';
+export { default } from './lib/additional-info';

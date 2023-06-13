@@ -1,1 +1,1 @@
-export * from './lib/basic-info';
+export { default } from './lib/basic-info';

@@ -1,1 +1,1 @@
-export * from './lib/store';
+export { default as OnboardingStore} from './lib/store';
