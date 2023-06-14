@@ -1,36 +1,13 @@
 import { proxy } from 'valtio';
 import { devtools } from 'valtio/utils';
-
-export interface StepAData {
-  fullName: string;
-  idNumber: string;
-}
-
-export interface StepBData {
-  email: string;
-  phone: string;
-  dateOfBirth: string;
-}
-
-export interface StepCData {
-  purposes: string[];
-}
-
-type StepDataKeys = 'stepA' | 'stepB' | 'stepC';
-
-type Template = 'ABC' | 'ACB';
-
-export interface OnboardingData {
-  isChooseTemplate: boolean;
-  template: Template | undefined;
-  activeStep: number;
-  isFormDone: boolean;
-  showReview: boolean;
-  showSuccess: boolean;
-  stepA: StepAData;
-  stepB: StepBData;
-  stepC: StepCData;
-}
+import {
+  OnboardingData,
+  StepAData,
+  StepBData,
+  StepCData,
+  StepDataKeys,
+  Template,
+} from '@e-wallet/shared/interface';
 
 const initialState: OnboardingData = {
   isChooseTemplate: false,
@@ -44,7 +21,7 @@ const initialState: OnboardingData = {
   stepC: { purposes: [] },
 };
 
-interface OnboardingStoreType extends OnboardingData  {
+interface OnboardingStoreType extends OnboardingData {
   onChooseTemplate: (template: Template) => void;
   setData: (
     step: StepDataKeys,
@@ -64,23 +41,11 @@ function onboardingStore() {
       OnboardingStore.isChooseTemplate = true;
       OnboardingStore.template = template;
     },
-    setData : (
-      step: StepDataKeys,
-      data: StepAData | StepBData | StepCData
-    ) => {
-        switch (step) {
-          case 'stepA':
-            OnboardingStore.stepA = data as StepAData;
-            break;
-          case 'stepB':
-            OnboardingStore.stepB = data as StepBData;
-            break;
-          case 'stepC':
-            OnboardingStore.stepC = data as StepCData;
-            break;
-        }
+    setData: (step: StepDataKeys, data: StepAData | StepBData | StepCData) => {
+      // @ts-ignore
+      OnboardingStore[step] = data;
     },
-    onBackToChooseTemplate : () => {
+    onBackToChooseTemplate: () => {
       OnboardingStore.isChooseTemplate = false;
       OnboardingStore.template = undefined;
       OnboardingStore.activeStep = 0;
@@ -89,32 +54,32 @@ function onboardingStore() {
       OnboardingStore.showSuccess = false;
       OnboardingStore.stepA = { fullName: '', idNumber: '' };
       OnboardingStore.stepB = { email: '', phone: '', dateOfBirth: '' };
-      OnboardingStore.stepC = { purposes: [] }
+      OnboardingStore.stepC = { purposes: [] };
     },
-    onNext : () => {
+    onNext: () => {
       const nextStep = OnboardingStore.activeStep + 1;
-       // TODO: Hardcoded length to avoid circular dependency
+      // TODO: Hardcoded length to avoid circular dependency
       if (nextStep < 3) {
         OnboardingStore.activeStep = nextStep;
       } else {
         OnboardingStore.showReview = true;
       }
     },
-    onBack : () => {
+    onBack: () => {
       const prevStep = OnboardingStore.activeStep - 1;
       if (prevStep >= 0) {
         OnboardingStore.activeStep = prevStep;
       }
     },
     onBackToEditForm: () => {
-      OnboardingStore.showReview =  false;
+      OnboardingStore.showReview = false;
       OnboardingStore.activeStep = 2;
     },
     onComplete: () => {
       OnboardingStore.showSuccess = true;
     },
-  }
-  
+  };
+
   return store;
 }
 

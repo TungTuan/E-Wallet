@@ -18,7 +18,7 @@
       "@e-wallet/additional-info": ["libs/additional-info/src/index.ts"],
       "@e-wallet/basic-info": ["libs/basic-info/src/index.ts"],
       "@e-wallet/choose-template": ["libs/choose-template/src/index.ts"],
-      "@e-wallet/constant": ["libs/constant/src/index.ts"],
+      "@e-wallet/config-step": ["libs/config-step/src/index.ts"],
       "@e-wallet/onboarding": ["libs/onboarding/src/index.ts"],
       "@e-wallet/purpose": ["libs/purpose/src/index.ts"],
       "@e-wallet/review-page": ["libs/review-page/src/index.ts"],

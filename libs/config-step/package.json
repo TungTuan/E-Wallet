@@ -1,5 +1,5 @@
 {
-  "name": "@e-wallet/constant",
+  "name": "@e-wallet/config-step",
   "version": "0.0.1",
   "main": "./index.js",
   "types": "./index.d.ts",

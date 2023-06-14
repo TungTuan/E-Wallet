@@ -4,7 +4,10 @@
   "license": "MIT",
   "scripts": {
     "start": "npx nx serve e-wallet",
-    "test": "npx nx run-many --all --target=test"
+    "test:unit": "npx nx run-many --all --target=test",
+    "test:e2e": "nx e2e e-wallet-e2e",
+    "test:open": "nx e2e e-wallet-e2e --watch",
+    "lint": "nx lint e-wallet"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +23,8 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.44.3",
     "valtio": "^1.10.5",
-    "yup": "^1.2.0"
+    "yup": "^1.2.0",
+    "start-server-and-test": "^2.0.0"
   },
   "devDependencies": {
     "@nx/cypress": "16.3.2",

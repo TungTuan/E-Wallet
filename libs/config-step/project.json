@@ -1,7 +1,7 @@
 {
-  "name": "constant",
+  "name": "config-step",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/constant/src",
+  "sourceRoot": "libs/config-step/src",
   "projectType": "library",
   "tags": [],
   "targets": {
@@ -9,7 +9,7 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/constant/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/config-step/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "build": {
@@ -17,7 +17,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/constant"
+        "outputPath": "dist/libs/config-step"
       },
       "configurations": {
         "development": {
@@ -30,10 +30,10 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/libs/constant"],
+      "outputs": ["coverage/libs/config-step"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/libs/constant"
+        "reportsDirectory": "../../coverage/libs/config-step"
       }
     }
   }

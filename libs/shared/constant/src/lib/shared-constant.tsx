@@ -1,14 +1,27 @@
-import styles from './shared-constant.module.scss';
 
-/* eslint-disable-next-line */
-export interface SharedConstantProps {}
-
-export function SharedConstant(props: SharedConstantProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to SharedConstant!</h1>
-    </div>
-  );
-}
-
-export default SharedConstant;
+export const purposeData = [
+  {
+    label: 'Money Transfer',
+    value: 'money-transfer',
+  },
+  {
+    label: 'Payment',
+    value: 'payment',
+  },
+  {
+    label: 'Bill Payment',
+    value: 'bill-payment',
+  },
+  {
+    label: 'loan',
+    value: 'Loan',
+  },
+  {
+    label: 'Investment',
+    value: 'investment',
+  },
+  {
+    label: 'Saving',
+    value: 'saving',
+  }
+]
