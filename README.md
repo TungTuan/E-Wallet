@@ -1,6 +1,6 @@
 # EWallet
 
-EWallet is an application build with React, Chakra UI, React Hook Form, Valtio and Yup. with some feature such as Multi-step onboarding process, Validation, state management, and Chakra for a good experience
+EWallet is a application built using React, Chakra UI, React Hook Form, Valtio, and Yup. These features include a Multi-step onboarding process, advanced validation capabilities, efficient state management using Valtio, and a visually appealing UI powered by Chakra UI.
 
 ## Prerequisites
   - Node.js (version >= 16.x.x)
@@ -37,8 +37,7 @@ To run e2e test:
 npm run test:e2e
 ```
 ## Technologies Used
-- Technologies Used
-- Nx Monorepo
+- Nx Workspace Monorepo
 - React
 - Vitest for unit test.
 - Cypress for e2e test.
