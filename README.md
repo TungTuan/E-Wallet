@@ -8,7 +8,7 @@ EWallet is an application build with React, Chakra UI, React Hook Form, Valtio a
   
 ## Architecture
 
-The project uses the Nx monorepo workspace, which allows for better code organization, reusability, and extensibility. The application is built with React and utilizes Vite as the build tool, providing faster build times and HMR (Hot Module Replacement) capabilities. For test, The project use @testing-library for Unit test and Cypress for e2e test.
+The project uses the Nx monorepo workspace, which allows for better code organization, reusability, and extensibility. The application is built with React and utilizes Vite as the build tool, providing faster build times and HMR (Hot Module Replacement) capabilities. For test, The project use Vitest for Unit test and Cypress for e2e test.
 
 # Getting Started
 Getting Started First, clone the repository and navigate to the project folder:
@@ -40,7 +40,7 @@ npm run test:e2e
 - Technologies Used
 - Nx Monorepo
 - React
-- @testing-library for unit test.
+- Vitest for unit test.
 - Cypress for e2e test.
 - React Hook Form
 - Valtio
