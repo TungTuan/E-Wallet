@@ -29,7 +29,7 @@ export function ChooseTemplate(props: ChooseTemplateProps) {
           <Box display={'flex'} flex="wrap" justifyContent={'space-around'}>
             {templates.map((template) => (
               <Card
-                id={`template${template.key}`}
+                data-testid={`template${template.key}`}
                 sx={{
                   padding: '1rem',
                   margin: '0.2rem',

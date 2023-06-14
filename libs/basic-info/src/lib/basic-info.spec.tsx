@@ -20,6 +20,11 @@ describe('BasicInfo', () => {
 
   it('should render the next button', () => {
     render(<BasicInfo />);
+    const reChooseTemplateButton = screen.getByRole('button', {
+      name: 'Choose template',
+    });
+    expect(reChooseTemplateButton).toBeTruthy();
+
     const nextButton = screen.getByRole('button', { name: 'Next' });
     expect(nextButton).toBeTruthy();
   });
