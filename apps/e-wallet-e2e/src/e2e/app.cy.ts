@@ -11,7 +11,7 @@ describe('e-wallet', () => {
   });
 
   it('on test flow ABC', () => {
-    cy.get('[id=templateABC]').click();
+    cy.get('[data-testid=templateABC]').click();
     cy.get('[id=onboading-title]').should(
       'have.text',
       'Enter your full name and ID number'
@@ -54,7 +54,7 @@ describe('e-wallet', () => {
   });
 
   it('on test flow ACB', () => {
-    cy.get('[id=templateACB]').click();
+    cy.get('[data-testid=templateACB]').click();
     cy.get('[id=onboading-title]').should(
       'have.text',
       'Enter your full name and ID number'
